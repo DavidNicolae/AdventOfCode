@@ -15,7 +15,7 @@ def a():
                 flag = False
                 break
         if flag:
-           ans += int(game[0]) 
+           ans += int(game[0])
     
     return ans
 
