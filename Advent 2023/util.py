@@ -1,7 +1,6 @@
 def get_input():
-    f = open('input.txt', 'r')
-    input = [line.strip() for line in f.readlines()]
-    f.close()
+    with open('input.txt', 'r') as f:
+        input = [line.strip() for line in f.readlines()]
     return input
 
 def get_input2():
