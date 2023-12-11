@@ -12,17 +12,15 @@ def p(const):
     for i, line in enumerate(input):
         if line.find('#') == -1:
             l.add(i)
-
-    x = 0
-    for x, line in enumerate(input):
-        offset = 0
-        while line:
-            y = line.find('#', offset)
-            if y != -1:
-                pos.append((x, y))
-                offset = y + 1
-            else:
-                break
+        else:
+            offset = 0
+            while True:
+                y = line.find('#', offset)
+                if y != -1:
+                    pos.append((i, y))
+                    offset = y + 1
+                else:
+                    break
 
     for i in range(len(pos)):
         for j in range(i + 1, len(pos)):
