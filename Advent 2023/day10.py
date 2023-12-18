@@ -43,7 +43,7 @@ def a_b():
         for j in range(len(maze[i])):
             if maze[i][j] in down and (i, j) in visited:
                 up = not up
-            if up and (i, j) not in visited:
+            elif up and (i, j) not in visited:
                 counter += 1
     
     return cost, counter
